@@ -1,0 +1,3 @@
+select c.first_name AS first_name, c.last_name AS last_name, c.city AS city, o.order_details AS order_details FROM customers c LEFT JOIN orders o 
+ON c.id = o.cust_id
+ORDER BY c.first_name, o.order_details ASC;
