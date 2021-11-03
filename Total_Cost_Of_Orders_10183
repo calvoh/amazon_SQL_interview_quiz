@@ -1,0 +1,4 @@
+select c.id, c.first_name, o.total_order_cost from customers c 
+LEFT JOIN orders o ON
+c.id = o.cust_id
+ORDER BY c.first_name ASC;
