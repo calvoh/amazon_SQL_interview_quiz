@@ -1,0 +1,5 @@
+SELECT DISTINCT c.id AS "Customer ID", COUNT(o.id) AS "Order ID" from customers c
+JOIN orders o ON c.id = o.cust_id
+GROUP BY c.id
+ORDER BY COUNT(o.id) DESC
+LIMIT 1;
