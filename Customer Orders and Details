@@ -1,0 +1,7 @@
+SELECT c.city,
+    COUNT(o.id) AS "Number of Orders",
+    COUNT(c.id) AS "Number of Customers",
+    SUM(o.total_order_cost) AS "Total Cost of Orders"
+    FROM customers c JOIN orders o ON c.id = o.cust_id
+    GROUP BY c.city
+    HAVING COUNT(o.id) > 5;
